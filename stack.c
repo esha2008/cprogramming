@@ -45,7 +45,6 @@ void print(struct node *head)
     printf("\n %d \n", head->element);
     head=head->next;
   }
-  printf("\n Empty list");
 }
 int main()
 {
