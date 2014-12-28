@@ -3,10 +3,13 @@
  * void push(int number): Pushes an element on top of the stack
  * int pop(): Removes the last pushed element from the stack
  */
+#include <stdio.h>
+#include <stdlib.h>
 struct node{
   int element;
   struct node *next;
 };
+struct node *head=NULL;
 //Pushing an element on top of the stack
 void push(int number)
 {
@@ -39,7 +42,7 @@ void print(struct node *head)
 {
   while(head!=NULL)
   {
-    printf("\n %d \n", head->number);
+    printf("\n %d \n", head->element);
     head=head->next;
   }
   printf("\n Empty list");
@@ -52,8 +55,8 @@ int main()
   push(30);
   push(40);
   print(head);
-  printf("\n Popping element in the stack.\n Modified list:")
+  printf("\n Popping element in the stack.\n Modified list:");
   pop();
-  print(head)
-  return 0;;
+  print(head);
+  return 0;
 }
