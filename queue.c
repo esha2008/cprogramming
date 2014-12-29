@@ -1,5 +1,5 @@
 /* Write a program to implement a Queue using Linked List
- * Stack should support the following operations
+ * Queue should support the following operations
  * void enqueue(int number): Queues an element at the end of the queue
  * int dequeue(): Removes an element from the front of the queue
  */
