@@ -6,12 +6,14 @@
  
 #include <stdio.h>
 #include <stdlib.h>
+
 struct node{
     int element;
     struct node *next;
 };
+
 struct node * head=NULL;
-//Queing an element at the end of queue
+
 void enqueue(int number)
 {
     struct node* newnode=(struct node *)malloc(sizeof(struct node));
@@ -27,19 +29,16 @@ void enqueue(int number)
         head=newnode;
     }
 }
-//Removing an element from the front of the queue
+
 int dequeue()
 {
     struct node *current=head;
-
     while(current->next->next!=NULL)
     {
         current=current->next;
     }
-
     int dequeued_element = current -> next -> element;
     current -> next = NULL;
-
     return(dequeued_element);
 }
 
@@ -52,6 +51,7 @@ void print(struct node * head)
         current=current->next;
     }
 }
+
 int main()
 {
     printf("\n Enqueue elements:");
@@ -63,5 +63,4 @@ int main()
     dequeue();
     print(head);
     return 0;
-    
 }
