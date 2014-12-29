@@ -67,12 +67,6 @@ int remove_element(int element) {
         current = current -> next;
     }
 
-    // Case 3: Element found at the end
-    if (current -> number == element) {
-        current = NULL;
-        return 0;
-    }
-
     return -1;
 }
 
@@ -93,7 +87,7 @@ int main() {
     printf("Original List \n");
     print(head);
 
-    remove_element(15);
+    remove_element(10);
 
     printf("List after removal \n");
     print(head);
